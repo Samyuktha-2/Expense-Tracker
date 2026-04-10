@@ -1,0 +1,202 @@
+﻿<UserControl x:Class="Expense_Tracker.View.DataGridView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Expense_Tracker.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid> 
+        <DataGrid ItemsSource="{Binding Transactions}"
+                  AutoGenerateColumns="False"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="None"
+                  RowBackground="{DynamicResource DataGridRowBrush}"
+                  AlternatingRowBackground="{DynamicResource DataGridAltRowBrush}"
+                  BorderThickness="0"
+                  CanUserAddRows="False"
+                  Foreground="{DynamicResource DataGridRowContentColor}"
+                  IsReadOnly="True"
+                  CanUserResizeRows="False">
+
+            <DataGrid.Resources>
+
+                <!-- Header Style -->
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontWeight"
+                            Value="Bold" />
+                    <Setter Property="FontSize"
+                            Value="14" />
+                    <Setter Property="Foreground"
+                            Value="{DynamicResource PrimaryTextBrush}" />
+                    <Setter Property="Background"
+                            Value="{DynamicResource DataGridHeaderBrush}" />
+                    <Setter Property="BorderThickness"
+                            Value="0" />
+                    <Setter Property="Padding"
+                            Value="10" />
+                </Style>
+
+                <!-- Row Hover -->
+                <Style TargetType="DataGridRow">
+                    <Setter Property="FontSize"
+                            Value="13" />
+                    <Setter Property="Height"
+                            Value="35" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="{DynamicResource DataGridHoverBrush}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn Width="40">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+
+                            <Ellipse Width="12"
+                                     Height="12"
+                                     VerticalAlignment="Center">
+
+                                <Ellipse.Style>
+                                    <Style TargetType="Ellipse">
+                                        <Setter Property="Fill"
+                                                Value="Gray" />
+
+                                        <Style.Triggers>
+
+                                            <DataTrigger Binding="{Binding Type}"
+                                                         Value="Income">
+                                                <Setter Property="Fill"
+                                                        Value="{DynamicResource IncomeColor}" />
+                                            </DataTrigger>
+
+                                            <DataTrigger Binding="{Binding Type}"
+                                                         Value="Expense">
+                                                <Setter Property="Fill"
+                                                        Value="{DynamicResource ExpenseColor}" />
+                                            </DataTrigger>
+
+                                        </Style.Triggers>
+
+                                    </Style>
+                                </Ellipse.Style>
+
+                            </Ellipse>
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Type"
+                                    Width="*"
+                                    Binding="{Binding Type}" />
+
+                <DataGridTextColumn Header="Category"
+                                    Width="*"
+                                    Binding="{Binding Category}" />
+                
+                <DataGridTextColumn Header="Date"
+                                    Width="*"
+                                    Binding="{Binding Date, StringFormat=dd MMM yyyy}" />
+
+                <DataGridTextColumn Header="Description"
+                                    Width="2*"
+                                    Binding="{Binding Description}" />
+
+                <DataGridTextColumn Header="Amount"
+                                    Width="*"
+                                    Binding="{Binding Amount, StringFormat=₹{0}}" />
+
+                <!--Edit Button-->
+                <DataGridTemplateColumn Header="Edit"
+                                        Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit"
+                                    Grid.Row="1"
+                                    FontSize="16"
+                                    FontWeight="SemiBold"
+                                    Margin="5"
+                                    BorderThickness="0"
+                                    Padding="10 3"
+                                    Cursor="Hand"
+                                    Command="{Binding DataContext.EditCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                    CommandParameter="{Binding}">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Foreground"
+                                                Value="White" />
+                                        <Setter Property="Background"
+                                                Value="{DynamicResource ButtonBackgroundBrush}" />
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border CornerRadius="10"
+                                                            Background="{TemplateBinding Background}">
+                                                        <ContentPresenter HorizontalAlignment="Center"
+                                                                          VerticalAlignment="Center" />
+
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <!--Delete Button-->
+                <DataGridTemplateColumn Header="Delete"
+                                        Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete"
+                                    Grid.Row="1"
+                                    FontSize="16"
+                                    Margin="5"
+                                    FontWeight="SemiBold"
+                                    BorderThickness="0"
+                                    Padding="10 3"
+                                    Cursor="Hand"
+                                    Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                    CommandParameter="{Binding}">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Foreground"
+                                                Value="White" />
+                                        <Setter Property="Background"
+                                                Value="{DynamicResource ButtonBackgroundBrush}" />
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border CornerRadius="10" 
+                                                            Background="{TemplateBinding Background}">
+                                                        <ContentPresenter HorizontalAlignment="Center"
+                                                                          VerticalAlignment="Center" />
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                             
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns> 
+        </DataGrid>
+
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,87 @@
+{
+  "Email": "sam@gmail.com",
+  "Name": "Sam",
+  "Transactions": [
+    {
+      "Date": "0001-01-01T00:00:00",
+      "Category": null,
+      "Amount": 0.0,
+      "Description": null,
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "0001-01-01T00:00:00",
+      "Category": null,
+      "Amount": 0.0,
+      "Description": null,
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "0026-03-10T00:00:00",
+      "Category": "System.Windows.Controls.ComboBoxItem: Income",
+      "Amount": 12344.0,
+      "Description": "Salary",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "0026-03-10T00:00:00",
+      "Category": "System.Windows.Controls.ComboBoxItem: Expense",
+      "Amount": 322.0,
+      "Description": "Food",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "0001-01-01T00:00:00",
+      "Category": "System.Windows.Controls.ComboBoxItem: Income",
+      "Amount": 4322.0,
+      "Description": "fff",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "0001-01-17T00:00:00",
+      "Category": "Income",
+      "Amount": 3243.0,
+      "Description": "dsff",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "2026-03-03T00:00:00",
+      "Category": "Expense",
+      "Amount": 4234.0,
+      "Description": "sweet",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "2026-02-07T00:00:00",
+      "Category": "Expense",
+      "Amount": 3352.0,
+      "Description": "das",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "2026-03-11T00:00:00+05:30",
+      "Category": "Income",
+      "Amount": 432423.0,
+      "Description": "fdf",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    }
+  ]
+}

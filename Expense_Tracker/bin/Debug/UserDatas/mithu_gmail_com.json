@@ -1,0 +1,51 @@
+{
+  "Email": "mithu@gmail.com",
+  "Name": "Mithu",
+  "Transactions": [
+    {
+      "Date": "2026-03-11T00:00:00+05:30",
+      "Category": "Expense",
+      "Amount": 200.0,
+      "Description": "Food",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "2026-03-11T00:00:00+05:30",
+      "Category": "Income",
+      "Amount": 1000.0,
+      "Description": "Salary",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "2026-03-11T00:00:00+05:30",
+      "Category": "Expense",
+      "Amount": 30.0,
+      "Description": "Frnd Gift",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "2026-03-11T00:00:00+05:30",
+      "Category": "Expense",
+      "Amount": 350.0,
+      "Description": "Frnd Party",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    },
+    {
+      "Date": "2026-03-11T00:00:00+05:30",
+      "Category": "Income",
+      "Amount": 1000.0,
+      "Description": "Frnd Gift",
+      "Income": 0.0,
+      "Expense": 0.0,
+      "Balance": 0.0
+    }
+  ]
+}

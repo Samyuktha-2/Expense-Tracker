@@ -1,0 +1,20 @@
+{
+  "Email": "magasri@gmail.com",
+  "Name": "ms",
+  "Transactions": [
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Expense",
+      "Category": "Food",
+      "Amount": 100.0,
+      "Description": "chappati"
+    },
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Income",
+      "Category": "Salary",
+      "Amount": 10000.0,
+      "Description": "lucid salary"
+    }
+  ]
+}

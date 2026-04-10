@@ -1,0 +1,219 @@
+﻿<UserControl x:Class="Expense_Tracker.View.FilterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Expense_Tracker.View"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+    <Border Grid.Row="2"
+             
+            Padding="10"
+            CornerRadius="8"
+            Background="{DynamicResource CardBackgroundBrush}">
+
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="8"
+                              ShadowDepth="1"
+                              Opacity="0.2" />
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- FILTER CONTROLS -->
+            <Grid Grid.Row="0"
+                  VerticalAlignment="Center">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="180" />
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition Width="140" />
+                    <ColumnDefinition Width="140" />
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Title -->
+                <TextBlock Text="Filter"
+                           FontSize="16"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           FontWeight="SemiBold"
+                           VerticalAlignment="Center"
+                           Foreground="{DynamicResource PrimaryTextBrush}"
+                           Margin="5" />
+
+                <!-- Search -->
+                <TextBlock Text="Search"
+                           VerticalAlignment="Center"
+                           FontSize="14"
+                           Grid.Row="0"
+                           Margin="10 0"
+                           Grid.Column="1"
+                           FontWeight="SemiBold"
+                           Foreground="{DynamicResource PrimaryTextBrush}"
+                           HorizontalAlignment="Left" />
+
+                <TextBox Grid.Column="1"
+                         Grid.Row="1"
+                         Margin="10 0"
+                         Height="30"
+                         Padding="5"
+                         Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!-- From Date -->
+                <TextBlock Text="From Date"
+                           FontSize="14"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"
+                           Grid.Row="0"
+                           Foreground="{DynamicResource PrimaryTextBrush}"
+                           Margin="10 0"
+                           Grid.Column="2" />
+                <DatePicker Grid.Column="2"
+                            Grid.Row="1"
+                            Margin="10 0"
+                            Height="30"
+                            SelectedDate="{Binding FilterFromDate}" />
+
+                <!-- To Date -->
+                <TextBlock Text="To Date"
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           VerticalAlignment="Center"
+                           Grid.Row="0"
+                           Foreground="{DynamicResource PrimaryTextBrush}"
+                           Margin="10 0"
+                           Grid.Column="3" />
+                <DatePicker Grid.Column="3"
+                            Grid.Row="1"
+                            Margin="10 0"
+                            Height="30"
+                            SelectedDate="{Binding FilterToDate}" />
+
+                <!-- Type -->
+                <TextBlock Text="Type"
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           VerticalAlignment="Center"
+                           Grid.Row="0"
+                           Foreground="{DynamicResource PrimaryTextBrush}"
+                           Margin="10 0"
+                           Grid.Column="4" />
+                
+                <ComboBox Grid.Column="4"
+                          Grid.Row="1"
+                          Margin="10 0"
+                          Height="30"
+                          SelectedItem="{Binding FilterType}">
+                    <ComboBox.ItemsSource>
+                        <x:Array Type="sys:String"
+                                 xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                            <sys:String>All</sys:String>
+                            <sys:String>Income</sys:String>
+                            <sys:String>Expense</sys:String>
+                        </x:Array>
+                    </ComboBox.ItemsSource>
+                </ComboBox>
+
+                <!--Category-->
+                <TextBlock Text="Category"
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           VerticalAlignment="Center"
+                           Grid.Row="0"
+                           Foreground="{DynamicResource PrimaryTextBrush}"
+                           Grid.Column="5" />
+
+                <ComboBox Grid.Column="5"
+                          Grid.Row="1"
+                          Margin="10 0"
+                          Height="30"
+                          SelectedItem="{Binding FilterCategory}">
+                    <ComboBox.ItemsSource>
+                        <x:Array Type="sys:String"
+                                 xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                            <sys:String>All</sys:String>
+                            <sys:String>Salary</sys:String>
+                            <sys:String>Business</sys:String>
+                            <sys:String>Investment</sys:String>
+                            <sys:String>Other Income</sys:String>
+                            <sys:String>Food</sys:String>
+                            <sys:String>Clothes</sys:String>
+                            <sys:String>Health Care</sys:String>
+                            <sys:String>Entertainment</sys:String>
+                            <sys:String>Transport</sys:String>
+                            <sys:String>Groceries</sys:String>
+                            <sys:String>Bills</sys:String>
+                            <sys:String>Other Expense</sys:String>
+                        </x:Array>
+                    </ComboBox.ItemsSource>
+                </ComboBox> 
+                
+                <!--Month Wise Filter--><!--
+                <TextBlock Text="Month Wise Search"
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           VerticalAlignment="Center"
+                           Grid.Row="0"
+                           Grid.Column="6" />
+                <DatePicker SelectedDate="{Binding SelectedMonth}" 
+                            Grid.Column="6"
+                            Grid.Row="1" 
+                            Margin="10 0"
+                            Height="30"/>-->
+
+                <!-- Clear Button -->
+                <Button Grid.Column="6"
+                        Grid.Row="1"
+                        Content="Clear"
+                        Height="30"
+                        FontSize="15"
+                        FontWeight="SemiBold"
+                        Padding="15 0"
+                        Background="{DynamicResource ButtonBackgroundBrush}"
+                        Foreground="{DynamicResource PrimaryTextBrush}"
+                        BorderThickness="0"
+                        Margin="10 0"
+                        Command="{Binding ClearFilterCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border CornerRadius="10"
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                              HorizontalAlignment="Center" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+            </Grid>
+
+            <!-- DATE ERROR MESSAGE -->
+            <TextBlock Grid.Row="1"
+                       Text="{Binding DateError}"
+                       Foreground="{DynamicResource ErrorMsgColour}"
+                       FontSize="12"
+                       Width="Auto"
+                       Margin="350 2 300 0" />
+
+        </Grid>
+    </Border>
+</UserControl>

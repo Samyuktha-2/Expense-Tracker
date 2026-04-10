@@ -1,0 +1,42 @@
+{
+  "Email": "123",
+  "Name": "123",
+  "Password": "123",
+  "Transactions": [
+    {
+      "Date": "2026-04-01T00:00:00+05:30",
+      "Type": "Income",
+      "Category": "Business",
+      "Amount": 331.0,
+      "Description": "dsd"
+    },
+    {
+      "Date": "2026-03-12T00:00:00",
+      "Type": "Income",
+      "Category": "Business",
+      "Amount": 2313131.0,
+      "Description": "fsa"
+    },
+    {
+      "Date": "2026-03-10T00:00:00",
+      "Type": "Expense",
+      "Category": "Health Care",
+      "Amount": 3123.0,
+      "Description": "dd"
+    },
+    {
+      "Date": "2026-03-30T00:00:00",
+      "Type": "Expense",
+      "Category": "Transport",
+      "Amount": 543.0,
+      "Description": "tgre"
+    },
+    {
+      "Date": "2026-03-30T00:00:00",
+      "Type": "Expense",
+      "Category": "Bills",
+      "Amount": 434.0,
+      "Description": "gfg"
+    }
+  ]
+}

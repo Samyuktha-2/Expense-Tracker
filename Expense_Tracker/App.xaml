@@ -1,0 +1,32 @@
+﻿<Application x:Class="Expense_Tracker.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Expense_Tracker"
+             xmlns:viewmodel="clr-namespace:Expense_Tracker.ViewModel"
+             xmlns:view="clr-namespace:Expense_Tracker.View"
+             StartupUri="MainWindow.xaml"> 
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/LightTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type viewmodel:LoginVM}">
+                <view:LoginPageView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:SignUpVM}">
+                <view:SignUpPageView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:HomeVM}">
+                <view:HomePageView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodel:ReportVM}">
+                <view:ReportPageView />
+            </DataTemplate>
+        </ResourceDictionary>
+ 
+
+    </Application.Resources>
+</Application>

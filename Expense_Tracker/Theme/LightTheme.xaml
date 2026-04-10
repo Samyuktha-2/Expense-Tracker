@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Expense_Tracker.Theme">
+
+    <!-- App Background -->
+    <SolidColorBrush x:Key="AppBackgroundBrush"
+                     Color="#F6F7FB" />
+
+    <!-- Card / Panel -->
+    <SolidColorBrush x:Key="CardBackgroundBrush"
+                     Color="White" />
+
+    <!-- Primary -->
+    <SolidColorBrush x:Key="PrimaryBrush"
+                     Color="#3A7AFE" />
+
+    <!-- Secondary Button -->
+    <SolidColorBrush x:Key="ButtonBackgroundBrush"
+                     Color="#FF0D407A" />
+    <SolidColorBrush x:Key="ButtonHoverBrush"
+                     Color="#E5E7EB" />
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="PrimaryTextBrush"
+                     Color="#111827" />
+    <SolidColorBrush x:Key="SecondaryTextBrush"
+                     Color="#333" />
+
+    <!-- DataGrid -->
+    <SolidColorBrush x:Key="DataGridHeaderBrush"
+                     Color="#F0F2F5" />
+    <SolidColorBrush x:Key="DataGridRowBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="DataGridAltRowBrush"
+                     Color="#F5F6FA" />
+    <SolidColorBrush x:Key="DataGridHoverBrush"
+                     Color="#E8F0FE" />
+    <SolidColorBrush x:Key="DataGridRowContentColor"
+                     Color="Black" />
+
+    <!-- Cards -->
+    <SolidColorBrush x:Key="IncomeCardBrush"
+                     Color="#E8F5E9" />
+    <SolidColorBrush x:Key="ExpenseCardBrush"
+                     Color="#FFEBEE" />
+    <SolidColorBrush x:Key="BalanceCardBrush"
+                     Color="#E3F2FD" />
+
+    <!-- Status Colors -->
+    <SolidColorBrush x:Key="IncomeColor"
+                     Color="Green" />
+    <SolidColorBrush x:Key="ExpenseColor"
+                     Color="Red" />
+    
+    <!--Income Card Font-->
+    <SolidColorBrush x:Key="IncomeCard"
+                     Color="#2E7D32" />
+    <SolidColorBrush x:Key="IncomeCardAmount"
+                     Color="#1B5E20" />
+    
+    <!--Expense Card-->
+    <SolidColorBrush x:Key="ExpenseCard"
+                     Color="#C62828" />
+    <SolidColorBrush x:Key="ExpenseCardAmount"
+                     Color="#B71C1C" />
+    
+    <!--Balance Card-->
+    <SolidColorBrush x:Key="BalanceCard"
+                     Color="#1565C0" />
+    <SolidColorBrush x:Key="BalanceCardAmount"
+                     Color="#0D47A1" />
+
+    <!--Theme Icon Color-->
+    <SolidColorBrush x:Key="IconColor"
+                     Color="Black" />
+
+    <!--Error Message Color-->
+    <SolidColorBrush x:Key="ErrorMsgColour"
+                     Color="Red" />
+</ResourceDictionary>

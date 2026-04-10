@@ -1,0 +1,112 @@
+{
+  "Email": "yuktha@gmail.com",
+  "Name": "Yuktha",
+  "Password": "yuktha",
+  "Transactions": [
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Expense",
+      "Category": "Food",
+      "Amount": 500.0,
+      "Description": "Breakfast"
+    },
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Expense",
+      "Category": "Clothes",
+      "Amount": 3500.0,
+      "Description": "Birthday"
+    },
+    {
+      "Date": "2026-02-01T00:00:00",
+      "Type": "Income",
+      "Category": "Salary",
+      "Amount": 2500.0,
+      "Description": "feb"
+    },
+    {
+      "Date": "2026-02-08T00:00:00",
+      "Type": "Expense",
+      "Category": "Entertainment",
+      "Amount": 1500.0,
+      "Description": "Movie"
+    },
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Income",
+      "Category": "Investment",
+      "Amount": 50.0,
+      "Description": ".."
+    },
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Expense",
+      "Category": "Transport",
+      "Amount": 50.0,
+      "Description": ".."
+    },
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Expense",
+      "Category": "Transport",
+      "Amount": 5600.0,
+      "Description": "tt"
+    },
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Income",
+      "Category": "Investment",
+      "Amount": 20000.0,
+      "Description": "new"
+    },
+    {
+      "Date": "2026-01-01T00:00:00",
+      "Type": "Income",
+      "Category": "Business",
+      "Amount": 1500.0,
+      "Description": "salary"
+    },
+    {
+      "Date": "2026-03-13T00:00:00+05:30",
+      "Type": "Expense",
+      "Category": "Clothes",
+      "Amount": 400.0,
+      "Description": "gf"
+    },
+    {
+      "Date": "2026-01-01T00:00:00",
+      "Type": "Expense",
+      "Category": "Clothes",
+      "Amount": 130.0,
+      "Description": "gdg"
+    },
+    {
+      "Date": "2026-01-11T00:00:00",
+      "Type": "Expense",
+      "Category": "Groceries",
+      "Amount": 500.0,
+      "Description": "tre"
+    },
+    {
+      "Date": "2026-02-06T00:00:00",
+      "Type": "Expense",
+      "Category": "Health Care",
+      "Amount": 460.0,
+      "Description": "fg"
+    },
+    {
+      "Date": "2025-03-14T00:00:00",
+      "Type": "Income",
+      "Category": "Salary",
+      "Amount": 45000.0,
+      "Description": ""
+    },
+    {
+      "Date": "2025-03-19T00:00:00",
+      "Type": "Expense",
+      "Category": "Entertainment",
+      "Amount": 430.0,
+      "Description": ""
+    }
+  ]
+}
